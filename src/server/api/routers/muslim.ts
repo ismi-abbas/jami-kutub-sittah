@@ -11,7 +11,6 @@ export const muslimRouter = createTRPCRouter({
   getAll: publicProcedure.query(async () => {
     const from = 1;
     const to = 10;
-    console.log(`${url}?range=~${from}-${to}`);
     const response: Response = await fetch(`${url}?range=${from}-${to}`);
     const parsed = await response.json();
     const result = parsed?.data?.hadiths;
