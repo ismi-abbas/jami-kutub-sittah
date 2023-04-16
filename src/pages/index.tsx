@@ -43,7 +43,12 @@ const Home: NextPage = () => {
                       key={idx}
                       className="rounded-lg p-4 text-slate-300 ring-1"
                     >
-                      <Link href={kitab.url}>{kitab.name}</Link>
+                      <Link
+                        className="flex items-center justify-center text-center"
+                        href={kitab.url}
+                      >
+                        {kitab.name}
+                      </Link>
                     </li>
                   );
                 })}

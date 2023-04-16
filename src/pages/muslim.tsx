@@ -1,5 +1,10 @@
 import { api } from "~/utils/api";
 import { type Hadith } from "~/utils/types";
+import {
+  BsFillArrowLeftSquareFill,
+  BsFillArrowRightSquareFill,
+} from "react-icons/bs";
+import Link from "next/link";
 
 const muslim = () => {
   const hadithData = api.muslim.getAll.useQuery();
@@ -16,7 +21,12 @@ const muslim = () => {
             </h1>
             <div className="flex flex-col items-center">
               <div className="flex items-center justify-center text-center">
-                <h1 className="m-4  text-2xl font-semibold text-slate-300/90">
+                <h1 className="m-4 flex flex-row items-center gap-2 text-center text-2xl font-semibold text-slate-300/90">
+                  <Link href="/">
+                    <span className="hover:text-slate-50">
+                      <BsFillArrowLeftSquareFill />
+                    </span>
+                  </Link>{" "}
                   Sahih Muslim
                 </h1>
               </div>
@@ -29,7 +39,7 @@ const muslim = () => {
                       className="mt-4 flex h-[500px] overflow-auto rounded-md border border-slate-700 px-6 text-slate-200 hover:text-slate-50 rtl:justify-start"
                     >
                       <div className="mt-4 flex flex-col">
-                        <h1>HR al-Bukhāri no: {hadith.number}</h1>
+                        <h1>HR Muslim no: {hadith.number}</h1>
                         <p className="flex items-start py-2 text-justify">
                           {hadith.arab}
                         </p>
@@ -44,6 +54,13 @@ const muslim = () => {
                   );
                 })}
               </div>
+            </div>
+            <div className="flex flex-row gap-4 text-2xl ">
+              <BsFillArrowLeftSquareFill
+                className="text-slate-400 hover:cursor-pointer hover:text-slate-50"
+                onClick={() => console.log("Test")}
+              />
+              <BsFillArrowRightSquareFill className="text-slate-400 hover:cursor-pointer hover:text-slate-50" />
             </div>
           </div>
         </main>

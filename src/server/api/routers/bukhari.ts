@@ -4,7 +4,8 @@
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 import { type GetAllProcedureResult } from "~/utils/types";
 
-const url = process.env.HADITH_API_URL || "http://localhost:3300/books/bukhari";
+const url =
+  process.env.HADITH_API_URL_BUKHARI || "http://localhost:3300/books/bukhari";
 
 export const bukhariRouter = createTRPCRouter({
   getAll: publicProcedure.query(async () => {
