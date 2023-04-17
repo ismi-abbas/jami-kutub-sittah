@@ -11,6 +11,7 @@ export interface KitabHadith {
   publisher?: string;
   datePublished?: string;
   url: string;
+  bookId: number;
 }
 
 export type GetAllProcedureResult = Promise<Hadith[]>;
