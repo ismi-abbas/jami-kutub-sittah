@@ -34,7 +34,7 @@ export const Default: React.FC<Props> = ({ children, book }) => {
       <Navbar />
       <main className="flex min-h-screen flex-col items-center justify-center bg-slate-900">
         <div className="flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          <h1 className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-5xl font-extrabold tracking-tight text-transparent text-white sm:text-[5rem]">
+          <h1 className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-5xl font-extrabold tracking-tight text-transparent sm:text-[5rem]">
             al-Jāmi&apos; Al-Kutub Al-Sittah
           </h1>
           <div>{children}</div>
