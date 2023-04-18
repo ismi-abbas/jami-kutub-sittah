@@ -53,21 +53,20 @@ const kitabHadith: KitabHadith[] = [
 const Home: NextPage = () => {
   return (
     <Default>
-      <h1 className="m-4 text-2xl font-semibold text-slate-300/90">
+      <h1 className="m-2 text-center text-2xl font-semibold text-slate-300/90">
         Pilih Kitab
       </h1>
       <div>
         <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {kitabHadith.map((kitab, idx) => {
             return (
-              <li key={idx} className="rounded-lg p-4 text-slate-300 ring-1">
-                <Link
-                  className="flex items-center justify-center text-center"
-                  href={kitab.url}
-                >
-                  {kitab.name}
-                </Link>
-              </li>
+              <Link
+                key={idx}
+                className="flex items-center justify-center rounded-lg p-4 text-center text-slate-300 ring-1 hover:bg-white/20"
+                href={kitab.url}
+              >
+                {kitab.name}
+              </Link>
             );
           })}
         </ul>

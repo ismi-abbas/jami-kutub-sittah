@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { type NextPage } from "next";
 import { Default } from "~/components/Default";
 import { Button } from "@chakra-ui/react";
 import Link from "next/link";
